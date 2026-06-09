@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Remix Icon Link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Gsap Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+    <!-- Scroll Trigger Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+    <script src="file.js" defer></script>
+    <script src="cart.js" defer></script>
+</head>
+
+<body>
+    <div class="main">
+        <section class="navbar">
+            <div class="nav-1">
+                <a href="index.html" class="nav-link">
+                    <h2>Loomix<br>
+                        <h4>Own The Drip</h4>
+                    </h2>
+                </a>
+            </div>
+            <div class="nav-2">
+                <a href="men.html" class="nav-link">
+                    <h3>Shop</h3>
+                </a>
+                <a href="" class="nav-link">
+                    <h3>Collections</h3>
+                </a>
+                <a href="men.html" class="nav-link">
+                    <h3>Mens</h3>
+                </a>
+                <a href="women.html" class="nav-link">
+                    <h3>Womens</h3>
+                </a>
+                <a href="aboutus.html" class="nav-link">
+                    <h3>Our Story</h3>
+                </a>
+                <a href="cart.html">
+                    <h3 id="cartBtn"><i class="ri-shopping-bag-fill"></i></h3>
+                </a>
+                <h3 id="clickBtn"><i class="ri-menu-line"></i></h3>
+
+            </div>
+        </section>
+
+        <section class="mobile-nav">
+            <a href="" class="nav-link">
+                <h3>Shop</h3>
+            </a>
+            <a href="" class="nav-link">
+                <h3>Collections</h3>
+            </a>
+            <a href="men.html" class="nav-link">
+                <h3>Mens</h3>
+            </a>
+            <a href="women.html" class="nav-link">
+                <h3>Womens</h3>
+            </a>
+            <a href="" class="nav-link">
+                <h3>Our Story</h3>
+            </a>
+
+        </section>
+
+        <div class="shopping-cart-container">
+            <h1 class="cart-heading">Shopping Cart (0)</h1>
+            <div class="delivery-item-info">
+                <h4 class="add-item">Add Item to get 30% off </h4>
+                <div class="free-delivery">
+                    <img src="./delivery/fast-delivery_526699.png" alt="">
+                    <h3 class="freeDelivery">Free Delivery by 20th June</h3>
+                </div>
+            </div>
+
+            <div class="cart-details-info">
+                <div class="cart-container">
+                    <div class="cart-data-display">
+
+                    </div>
+                </div>
+                <div class="coupon-container">
+                    <div class="coupon-code-container">
+                        <h3>Apply Coupon</h3>
+
+                        <div class="apply">
+                            <input type="text" placeholder="Enter the Coupon Code">
+                            <button id="apply">APPLY</button>
+                        </div>
+
+                        <div class="no-coupon-applied">
+                            <h4> <i class="ri-discount-percent-line"></i>No Coupon Applied</h4>
+                        </div>
+
+                        <div class="coupons-container">
+                            <div class="coupon-data">
+                                <div class="discount-icon">
+                                    <h4><i class="ri-discount-percent-line"></i></h4>
+                                </div>
+                                <div class="discount-info-data">
+                                    <h4>BG3500</h4>
+                                    <h4>₹500 off on Minimum purchase of 3 quantity</h4>
+                                </div>
+                                <button id="coupon-apply-one">Apply</button>
+                            </div>
+                            <div class="coupon-data">
+                                <div class="discount-icon">
+                                    <h4><i class="ri-discount-percent-line"></i></h4>
+                                </div>
+                                <div class="discount-info-data">
+                                    <h4>BG3800</h4>
+                                    <h4>₹800 off on Minimum purchase of 4 quantity</h4>
+                                </div>
+                                <button id="coupon-apply-two">Apply</button>
+                            </div>
+                            
+
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="order-summary-container">
+                        <h3>Order Summary</h3>
+                        <div class="subtotal">
+                            <h5>Subtotal</h5>
+                            <p id="final-amount">₹0</p>
+                        </div>
+                        <div class="discountorder">
+                            <h5>Discount<br>Discount On Mrp</h5>
+                            <p id="discount-on-mrp">₹0</p>
+                        </div>
+                        <div class="discount-on-coupon">
+                            <h5>Discount <br>ON COUPON</h5>
+                            <p id="discount-oncoupon">₹0</p>
+                        </div>
+                        <div class="taxorder">
+                            <h5>Tax</h5>
+                            <p>Included</p>
+                        </div>
+                        <div class="deliveryorder">
+                            <h5>Delivery</h5>
+                            <p>Free Delivery</p>
+                        </div>
+                        <div class="order-total">
+                            <h3>Order Total</h3>
+                            <h4 id="grandtotal">₹0</h4>
+                        </div>
+                        <div class="secure-checkout">
+                            <h2>SECURE CHECKOUT</h2>
+                        </div>
+                    </div>
+                </div>   
+                    
+                    
+                
+            </div>
+            
+           
+        </div>
+    </div>
+
+</body>
+
+</html>

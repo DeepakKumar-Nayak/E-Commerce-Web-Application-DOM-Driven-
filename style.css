@@ -1,0 +1,2171 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+.main{
+    width:100%;
+    height:100%;
+    background-color: white;
+    padding: 0rem;
+
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem 0rem 1rem;
+    position: relative;
+    z-index: 3;
+}
+
+.nav-2{
+    display: flex;
+    align-items: center;
+    gap: .5rem
+}
+
+.nav-1{
+    font-family: "Big Shoulders", sans-serif;
+}
+.nav-1 h2{
+    line-height: 0.9;
+    font-size: 3rem;
+}
+.nav-1 h4{
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.nav-2 #clickBtn, .nav-2 #cartBtn, .nav-2 #wishlistBtn{
+    height: 25px;
+    width: 25px;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color:black;
+}
+
+
+.nav-link{
+    text-decoration: none;
+    color:black
+}
+
+/* .mobile-nav.mobile-nav-toggle{
+    display: flex;
+    height: 80%;
+
+} */
+.mobile-nav{
+    padding: 1rem;
+    display: none;
+    margin-top: 2rem;
+    width:100%;
+    flex-direction: column;
+    gap: 1rem;
+    transition: ease-in-out 0.5s;
+}
+
+.mobile-nav h3{
+    color:white;
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    color:black;
+}
+
+
+.nav-2 h3{
+    text-transform: uppercase;
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    
+}
+
+.cards-container{
+    padding: 1rem;
+    width:100%;
+    height: 100%;
+    
+
+    margin-top: 2rem;
+    position: relative;
+    
+}
+
+.cards{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:3%;
+    width:94%;
+}
+
+.cards img{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    left:0;
+    top:0;
+    object-fit: cover;
+    object-position: center;
+    z-index: 2;
+    display: block;
+
+    filter: brightness(0.4) contrast(0.9);
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    position: relative;
+    width:100%;
+    height:80%;
+    z-index: 2;
+    padding: 1rem;
+}
+
+.text-container h1{
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 2rem;
+    max-width: 600px;
+    line-height: .9;
+    font-weight: 800;
+    color:white;
+}
+.text-container p{
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    max-width: 550px;
+    line-height: 1;
+    font-weight: 400;
+    color:rgb(47, 45, 45);
+    color:white;
+    padding-top: .5rem;
+}
+
+#shop{
+    margin-top: 1rem;
+    border:1px solid white;
+    width:max-content;
+    background-color: white;
+    font-family: Inter;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 50px;
+    padding: .2rem .5rem;
+}
+#shop i{
+    height: 40px;
+    width:40px;
+    background-color: black;
+    color:white;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.stable-navbar{
+    position: absolute;
+    bottom:1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top:1px solid rgb(247, 244, 244);
+    width:90%;
+    left: 5%;
+    padding: 1rem 0rem 1rem 0rem;
+    z-index: 3;
+}
+.stable-navbar h1{
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 1.4rem;
+    padding-bottom: .5rem;
+    color:white;
+    
+}
+.stable-navbar p{
+    font-family: "Inter", sans-serif;
+    max-width: 180px;
+    line-height: 1;
+    color:white;
+    font-size: .8rem;
+    display: none;
+}
+
+.new-drops{
+    padding: 5rem 0rem 8rem 0rem;
+    width:100%;
+    color:rgb(13, 13, 13);
+
+    display:flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+
+}
+
+.new-drops h1{
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 4rem;
+
+
+}
+.new-drops p{
+    font-family: Inter;
+    max-width: 600px;
+}
+.drops-cards-contaner{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.cards-drops{
+    width:100%;
+    border:1px solid white;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap:.4rem
+}
+
+
+
+.cards-drops img{
+    width:100%;
+    aspect-ratio: 1/1.5;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    
+}
+
+.rate-container{
+    display: flex;
+    gap: 1rem
+}
+.rate-container h2{
+    font-size: 1.3rem;
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 400;
+}
+.cards-drops .title{
+    font-size: 1.5rem;
+}
+.new{
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    border:1px solid black;
+    height: 40px;
+    width:60px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight:300;
+    font-family: "Big Shoulders", sans-serif;
+    background-color: black;
+    color:white;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.original_price{
+    text-decoration: line-through;
+}
+
+.ship-section{
+    width:100%;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.ship-section-cards{
+    display: flex;
+    flex-direction: column;
+    gap:5px
+}
+
+.ship-section .title{
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 1.8rem;
+}
+
+.ship-section .desc{
+    font-family: "Inter", sans-serif;
+    font-size: .8rem;
+
+}
+
+.ship-cards{
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+}
+
+.ship-cards img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+
+
+.ship-cards:nth-child(2), .ship-cards:nth-child(3){
+    background-color: black;
+    color:white;
+    height: 100%;
+    width:100%;
+
+    display: flex;
+    flex-direction: column;
+    gap:.3rem;
+    justify-content: flex-end;
+    padding: 1rem
+}
+
+.ship-cards h1{
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 1rem;
+}
+
+.ship-cards p{
+    font-family: "Inter", sans-serif;
+    font-size: .4rem;
+    text-transform: capitalize;
+}
+.ship-cards h4{
+    font-family: "Inter", sans-serif;
+    border:1px solid white;
+    width:max-content;
+    display: inline-flex;
+    align-items: center;
+    gap:.2rem;
+    border-radius: 50px;
+    margin-top: 1rem;
+    font-size: .8rem
+}
+
+.ship-cards h4 i{
+    width:30px;
+    height:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid white;
+    border-radius: 50px;
+}
+
+.ship-cards:nth-child(2) h4{
+    padding:.2rem .5rem;
+    background-color: white;
+    color:black
+}
+
+.ship-cards:nth-child(3) h4{
+    padding:.5rem .5rem;
+    background-color: rgb(9, 9, 9);
+    color:rgb(254, 253, 253)
+
+}
+.ship-cards:nth-child(2) i{
+    background-color: black;
+    color:white;
+}
+.ship-cards:nth-child(3) i{
+    background-color: rgb(249, 244, 244);
+    color:rgb(7, 7, 7);
+}
+
+
+.ship-cards:nth-child(3){
+    background-color: #E4E4E4;
+    color:black;
+
+    
+}
+
+
+
+/* STORY SECTION STYLING STARTS */
+.story{
+    padding: 6rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem
+}
+.story .top .title{
+    font-family: Inter;
+    padding-bottom: .8rem;
+}
+.story .top .heading{
+    line-height: 1;
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 4rem;
+}
+
+.story .bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+}
+
+.story .bottom p{
+    font-family: Inter;
+    font-size: .9rem;
+}
+.story .bottom h4{
+    width: max-content;
+    font-family: Inter;
+    font-size: .8rem;
+    border:1px solid black;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: .5rem .5rem .5rem 1rem;
+    border-radius: 20px;
+    background-color: black;
+    color:white
+}
+
+.story .bottom h4 i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:25px;
+    height:25px;
+    background-color: rgb(241, 238, 238);
+    color:rgb(15, 14, 14);
+    border-radius: 50%;
+
+}
+
+/* STORY SECTION STYLING ENDS */
+
+/* featured-drop-section styling starts */
+
+.featured-drop-section{
+    padding: 0rem 0rem 5rem 0rem;
+    display:flex;
+    flex-direction: column;
+    gap: 1rem
+
+}
+.featured-drop-section .heading{
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    padding: 0rem 1rem;
+
+}
+.featured-drop-section .description{
+    font-family: Inter;
+    font-size: 1rem;
+    line-height: 1.2;
+    padding: 0rem 1rem;
+
+
+}
+.featured-drop-cards-container{
+    display: flex;
+    gap:0rem;
+    overflow-x: auto;
+}
+.featured-drop-cards-container::-webkit-scrollbar{
+   display: none;
+}
+
+.featured-cards{
+    flex-shrink: 0;
+    width:100%;
+    position: relative;
+    padding: 1rem;
+    
+}
+.featured-cards img{
+    aspect-ratio: 1/1;
+    width:100%;
+    
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+    filter: brightness(0.7) contrast(0.9);
+}
+
+.featured-cards .content{
+    position: absolute;
+    bottom:0;
+    left:0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:.4rem
+    
+}
+
+.featured-cards .content h3{
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 1rem;
+    color:white;
+}
+.featured-cards .content p{
+    font-family: "Inter", sans-serif;
+    font-size: .8rem;
+    color:white
+}
+
+/* featured-drop-section styling ends */
+
+
+/* hoodie area styling starts */
+
+.hoodie-area{
+    padding: 1rem;
+    background-color: black;
+    color:white;
+    
+    display:flex;
+    flex-direction: column;
+    gap: 2rem
+
+}
+
+.hoodie-area .heading{
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+    padding-bottom: 1rem;
+}
+
+.hoodie-area .description{
+    font-family: Inter;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
+.hoodie-area .rate-container{
+    padding-bottom: .5rem;
+}
+
+.hoodie-area .rate-container h3{
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 400;
+    font-family: 1.5rem;
+
+}
+
+.hoodie-area h4{
+    border:1px solid white;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: .4rem .4rem .4rem 1.5rem;
+    background-color: white;
+    border-radius: 50px;
+    color:black;
+    gap: 1rem;
+    font-family: Inter;
+    font-weight: 400;
+}
+
+.hoodie-area h4 i{
+    display:flex;
+    width:35px;
+    height:35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color:white;
+    border-radius: 50%;
+}
+
+
+.hoodie-area img{
+    aspect-ratio: 1/1;
+    width:100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px;
+}
+.hoodie-area .bottom .hoodie-container{
+    width:100%;
+    display: flex;
+    gap: .2rem;
+    justify-content: space-between;
+}
+.hoodie-container img{
+    width:24.5%;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+
+.hoodie-container img:nth-child(1):hover{
+    border: 3px solid white
+}
+.hoodie-container img:nth-child(2):hover{
+    border: 3px solid white
+}
+.hoodie-container img:nth-child(3):hover{
+    border: 3px solid white
+}
+.hoodie-container img:nth-child(4):hover{
+    border: 3px solid white
+}
+
+
+/* hoodie area styling ends */
+
+
+/* join-section-stying-starts */
+.join{
+    margin-top: 3rem;
+    width:100%;
+    height:100%;
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+}
+.join img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+.join .join-content-container{
+    position: absolute;
+    top:2%;
+    height:90%;
+    width:90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    gap: 1rem
+}
+.join .join-content-container h1{
+    font-family: "Big Shoulders", sans-serif;
+    color:white;
+    font-size: 3rem;
+    line-height: .9;
+}
+
+.join .join-content-container p{
+    font-family: Inter;
+    color:white
+}
+
+
+
+.join .join-content-container h4{
+    border:1px solid white;
+    width: max-content;
+    padding:.5rem .5rem .5rem 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    color:rgb(11, 11, 11);
+    font-size: 1rem;
+    font-weight: 300;
+    gap:.5rem;
+    font-family: Inter;
+    background-color: white;
+    border-radius: 25px;
+}
+.join .join-content-container h4 i{
+    width:30px;
+    height:30px;
+    border:1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(11, 10, 10);
+    border-radius: 50%;
+    color:rgb(244, 235, 235)
+}
+
+/* join-section-styling-ends */
+
+
+
+
+/* shop-with-us-styling-starts */
+
+.shop-with-us{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 2rem
+}
+
+.shop-with-us-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:.5rem
+}
+
+.shop-with-us-cards .image-div{
+    width:50px;
+    height:50px;
+    border:1px solid black;
+    border-radius: 50%;
+    
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shop-with-us .image-div img{
+    width:70%;
+    height: 70%;
+}
+
+.shop-with-us .top h1{
+    font-size: 3.5rem;
+    font-family: "Big Shoulders", sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.shop-with-us .top p{
+    font-family: Inter;
+    font-size: 1rem;
+}
+
+.shop-with-us .left{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:2rem;
+}
+
+.shop-with-us .left .title{
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 1rem;
+}
+
+.shop-with-us .left .desc{
+    font-family: "Inter";
+    font-size: .8rem;
+}
+/* shop-with-us-styling-starts */
+
+
+.footer{
+    background-color: black;
+    color:grey;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem
+}
+.footer li{
+    list-style-type: none;
+}
+.footer .top{
+    display: flex;
+    flex-direction: column;
+    gap:1rem
+}
+
+.footer .top h1{
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 3rem;
+}
+
+
+.footer .top h4{
+    font-family: "Big Shoulders", sans-serif;
+}
+.footer .top p{
+    font-family: Inter;
+    font-size: .9rem;
+}
+
+.footer .bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.footer .bottom .menu h3{
+    font-family: Inter;
+    font-size: .8rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
+.footer .bottom .shop h3{
+    font-family: Inter;
+    font-size: .8rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
+
+.footer .bottom .menu h3:nth-child(1){
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 1.2rem;
+    color:white
+}
+
+.footer .bottom .shop h3:nth-child(1){
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 1.2rem;
+    color:white;
+}
+
+.footer .bottom .social h3{
+    font-family: "Big Shoulders", sans-serif;
+    color:white;
+    padding-bottom: 1rem;
+}
+
+
+.footer .bottom .social .social-icons li{
+    display: flex;
+    gap: .5rem
+}
+
+.footer .bottom .social .social-icons li h3{
+    font-family: Inter;
+    font-size: .9rem;
+    font-weight: 300;
+    color:grey
+}
+.brand-name{
+    background-color: black;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-name h1{
+    font-family: "Big Shoulders", sans-serif;
+    font-size: clamp(5rem, 30vw, 30rem);
+
+    line-height: .8;
+    text-align: center;
+    padding: 8rem 0rem;
+
+    color: transparent;
+     -webkit-text-stroke: 1px rgba(255,255,255,.15);
+}
+
+.brand-name h2{
+    position: absolute;
+    color:rgba(255, 255, 255, 0.288);
+    font-family: "Big Shoulders", sans-serif;
+    bottom:15%;
+    left:50%;
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+    font-size: clamp(.8rem, 1.2rem, 2rem);
+}
+
+/* mens-section-styling-starts */
+.category-container{
+    width:100%;
+    padding: 1rem;
+}
+.mens-products-section{
+    padding: 1rem;
+}
+
+
+
+/* .men, .women{
+    width:100%;
+} */
+
+.men a, .women a {
+    text-decoration: none;
+    display: inline-block; 
+}
+.men img, .women img {
+    cursor: pointer;
+    aspect-ratio: 3/4;
+    width:100%;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(0.7) contrast(0.9);
+}
+
+.men, .women {
+    position: relative;
+}
+.men h1, .women h1{
+    position: absolute;
+    bottom:10%;
+    left:10%;
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 5rem;
+    color:rgb(238, 236, 236);
+}
+
+.mens-products-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width:100%;
+    gap:.5rem;
+    row-gap: 1rem;
+}
+.mens-products-section a{
+    color: black;
+    text-decoration: none;
+}
+
+.mens-products-section .card{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap:.5rem
+}
+
+.mens-products-section .card .image-wrapper{
+    width:100%;
+    aspect-ratio: 3/4;
+    position: relative;
+    overflow: hidden;
+}
+.mens-products-section .card .image-wrapper img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.mens-products-section .card .image-wrapper .new-arrival{
+    position: absolute;
+    top:2%;
+    left:2%;
+    background-color: rgba(0, 0, 0, 0.446);
+    color:white;
+    font-family: Inter;
+    padding: .5rem .7rem;
+}
+
+.mens-products-section .info-section{
+    display: flex;
+    flex-direction: column;
+    gap:.2rem
+}
+.mens-products-section .info-section .title{
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+}
+.mens-products-section  .info-section .price-row{
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+
+}
+
+.mens-products-section .info-section .price-row p{
+    font-family: Inter;
+    font-size: .5rem;
+    font-weight: 500;
+}
+.mens-products-section .info-section .price-row p:nth-child(3){
+    color:green
+}
+
+
+/* mens-section-styling-ends */
+
+/* women-section-styling-starts */
+.womens-products-section{
+    padding: 1rem;
+}
+
+/* women-section-styling-ends */
+
+
+
+
+
+
+/* product details info */
+.display-product-details .product-detail-card{
+    width:100%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    width:100%;
+
+}
+
+
+.display-product-details .image-wrapper{
+    width:100%;
+    aspect-ratio: 3/4;
+    position: relative;
+}
+.display-product-details .image-wrapper img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+.display-product-details .sizes{
+    display: flex;
+    flex-wrap: wrap;
+    gap:.5rem;
+    padding-bottom: .9rem;
+}
+.active{
+    background-color: black;
+    color:white
+}
+.display-product-details .sizes p{
+    border:1px solid black;
+    width:50px;
+    height: 50px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+
+}
+.display-product-details .size-container h3{
+    font-family: Inter;
+    font-size: .9rem;
+}
+
+.display-product-details .size-container span{
+    font-size: .9rem;
+    font-weight: 300;
+}
+.display-product-details .price-row{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    font-size: 1.2rem;
+    font-family: Inter;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(181, 177, 177, 0.562);
+    padding-bottom: .6rem;
+
+}
+.display-product-details .price-row p:nth-child(2){
+  font-size: .8rem;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.display-product-details .price-row p:nth-child(3){
+    font-size: .8rem;
+    color:green
+    
+}
+.display-product-details .product-info .title{
+    font-family: Inter;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+.display-product-details .product-info .tax{
+    padding-top: .6rem;
+    padding-bottom: .2rem;
+    font-family: Inter;
+}
+.display-product-details .size-container{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem
+}
+
+.display-product-details .size-container .size-info{
+    display: flex;
+    gap:.5rem;
+    font-family: Inter;
+    font-size: .8rem;
+    padding-bottom: .8rem;
+}
+.return-exchange{
+    font-size: .9rem;
+    font-family: "Inter", sans-serif;
+    border:1px solid rgb(22, 23, 22);
+    padding: .5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1rem;
+}
+.add-to-cart{
+    margin-bottom: 1rem;
+    color:white;
+    width: max-content;
+    padding: 1rem 1.5rem;
+    font-family: Inter;
+    background-color: black;
+    cursor: pointer;
+}
+.add-to-cart:active{
+    transform: scale(0.94);
+}
+.check-delivery{
+    margin-bottom: 1rem;
+}
+.check-delivery .input-container{
+    width:100%;
+    display: flex;
+    background-color: black;
+    padding: 1rem;
+}
+.check-delivery input{
+    flex:2;
+    background-color: black;
+    outline: none;
+    border:none;
+    font-size: 1rem;
+    color:white
+
+}
+.check-delivery h3{
+    flex:1;
+    color:white;
+    text-align: center;
+    font-family: Inter;
+    cursor: pointer;
+}
+.check-delivery h3:active{
+    transform: scale(0.80);
+}
+
+.check-delivery h1{
+    font-size: 1.5rem;
+    font-family: Inter;
+    padding-bottom: .7rem;
+}
+
+
+.stores-container .store img{
+    width:40px;
+    height: 40px;
+}
+.stores-container{
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.stores-container .store{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.stores-container .store p{
+    text-align: center;
+    font-family: Inter;
+    font-size: .9rem;
+    padding-top: .5rem;
+    padding-right: .2rem;
+    line-height: 1;
+    
+}
+
+.key-highlights{
+    padding: 2rem 0rem;
+}
+
+.key-highlights h3{
+    font-family: Inter;
+    font-size: 1.5rem;
+}
+.cityDetails .top{
+    padding: 1rem 0rem .2rem 0rem;
+    display: flex;
+}
+.cityDetails{
+    display: flex;
+    flex-direction: column;
+}
+.cityDetails .top h4{
+    padding-left: 1rem;
+    font-family: Inter;
+    font-weight: 300;
+}
+.cityDetails .bottom .confirm{
+    font-family: "Inter";
+    padding-left: 0;
+}
+.cityDetails .top .icon{
+    background-color: green;
+    color:white;
+    height: 18px;
+    width:18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0rem;
+    border-radius: 50%;
+    
+}
+
+.invalid .invalid-text{
+    font-family: Inter;
+    padding: .5rem 0rem;
+}
+
+.cloth-highlights-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+}
+
+.cloth-highlights-container h5{
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.cloth-highlights-container h4{
+    font-family: Inter;
+    font-weight: 500;
+}
+
+.product-desc img{
+    width:25px;
+    height: 25px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-description{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+.product-description h1{
+    font-family: Inter;
+
+}
+.product-desc{
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+}
+.product-desc p{
+    font-family: Inter;
+    font-size: .9rem;
+    border:1px solid rgb(8, 8, 8);
+    padding: 1rem;
+    display: none;
+}
+.product-desc .product-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:.5rem;
+}
+.product-desc .product-info .product-data{
+    display: flex;
+    align-items: center;
+    gap: .5rem
+}
+
+.product-desc .product-info .product-data h3{
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.product-desc .product-info .product-data h5{
+    font-family: Inter;
+    font-size: .8rem;
+    font-weight: 300;
+    
+}
+
+/* product details info */
+
+
+
+/* cart styling starts */
+.shopping-cart-container{
+    padding: 1rem;
+}
+.cart-heading{
+    font-family: "Big Shoulders", sans-serif;
+    padding-bottom: 1rem;
+}
+.add-item{
+    font-family: Inter;
+    color:green;
+    font-size: 1rem;
+}
+.freeDelivery{
+    font-family: Inter;
+    font-size: .9rem;
+}
+.free-delivery img{
+    width:30px;
+    height: 30px;
+}
+.free-delivery{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.cart-data-display{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+}
+.cart-data-display .cart{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+
+}
+.cart-data-display .cart .left img{
+    width:100px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cart-data-display .cart .left{
+    display: flex;
+    gap: 1rem;;
+}
+.product-details-info{
+   display: flex;
+   flex-direction: column;
+}
+.product-details-info h5{
+    font-family: Inter;
+}
+.product-details-info p:nth-child(2){
+    font-family: Inter;
+    font-size: .9rem;
+    color:rgba(0, 0, 0, 0.333)
+}
+.product-details-info p:nth-child(4){
+    font-family: Inter;
+    font-size: 1rem;
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.discount-info{
+    display: flex;
+    align-items: center;
+    gap: .5rem
+}
+.discount-info p:nth-child(2){
+    color:green;
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.discount-info p:nth-child(1){
+    color:black;
+    text-decoration: line-through;
+}
+.product-details-info h4{
+    font-weight: 500;
+    margin-top: auto;
+    font-family: Inter;
+    color:rgb(255, 255, 255);
+    font-size: .9rem;
+    border:1px solid black;
+    width: max-content;
+    padding: .5rem 1rem;
+    background-color: black;
+    cursor: pointer;
+}
+
+.product-details-info h4:active{
+    transform: scale(0.94);
+}
+.cart .right h4{
+    font-family: Inter;
+    font-size: 1.4rem;
+}
+.cart-details-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+.coupon-code-container{
+    border:1px solid rgb(18, 18, 18);
+    padding: 1rem;
+}
+.coupon-code-container h3{
+    font-family: "Big Shoulders", sans-serif;
+    padding-bottom: 1rem;
+}
+.apply{
+    display: flex;
+    gap:.5rem;
+    margin-bottom: 1rem;
+}
+.apply input{
+    width:80%;
+    height:50px;
+    padding: .5rem;
+    font-size: 1rem;
+}
+.apply button{
+    display: block;
+    padding: 1rem;
+    cursor: pointer;
+}
+.apply button:active{
+    transform: scale(0.90);
+}
+
+.no-coupon-applied{
+    font-family:  Inter;
+    font-size: .9rem;
+    background-color: black;
+    color:white;
+    padding:1rem;
+}
+.no-coupon-applied h4{
+    display: inline-flex;
+    gap:.2rem;
+    align-items: center;
+    font-weight: 400;
+}
+
+.coupons-container{
+    padding: .5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+}
+.coupon-container{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.coupon-data{
+    display: flex;
+    align-items: center;
+    gap:.5rem;
+    width:100%;
+}
+.coupon-data i{
+    color:green
+}
+
+.coupon-data h4{
+    font-family: Inter;
+    font-size: .8rem;
+    font-weight: 400;
+}
+.coupon-data button{
+    margin-left: auto;
+    padding: .5rem 1rem;
+}
+.coupon-data button:active{
+    transform: scale(0.90);
+}
+
+.discount-info-data h4:nth-child(1){
+    color:green;
+    font-weight: 600;
+}
+
+.order-summary-container{
+    padding: 1rem;
+    border:1px solid black
+}
+
+.order-summary-container>h3{
+    font-family: "Big Shoulders", sans-serif;
+}
+.order-summary-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.subtotal, .discountorder, .taxorder, .deliveryorder, .order-total, .discount-on-coupon{
+    display: flex;
+    justify-content: space-between;
+}
+.subtotal>h5, .discountorder>h5, .taxorder>h5, .deliveryorder>h5, .discount-on-coupon>h5{
+    font-family: Inter;
+    font-size: .9rem;
+    font-weight: 400;
+}
+.order-total>h3{
+    font-family: Inter;
+    font-weight: 600;
+}
+.subtotal>p, .discountorder>p, .taxorder>p, .deliveryorder>p, .order-total>p, .discount-on-coupon>p{
+    font-family: Inter;
+    font-size: .9rem;
+    font-weight: 600;
+}
+.secure-checkout{
+    background-color: black;
+    color:white;
+    font-family: "Big Shoulders", sans-serif;
+    text-align: center;
+    padding: 1rem;
+}
+#grandtotal{
+    font-size: 1.3rem;
+    font-family: Inter;
+    font-weight: 800;
+}
+
+.wishlist-container{
+    padding: 1rem;
+}
+
+/* cart styling ends */
+
+
+
+
+
+
+/* aboutus styling starts */
+.about-us{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    
+}
+.about-us img{
+    position: relative;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 2;
+    
+}
+.about-us .container{
+    position: absolute;
+    top:70%;
+    width:100%;
+    z-index: 2;
+    
+    font-family: Inter;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 5rem;
+    overflow: hidden;
+}
+.about-us .container h1{
+    color:rgb(75, 75, 75)
+}
+/* aboutus styling ends */
+
+
+@media(min-width:200px){
+    .nav-2 h3:nth-child(5){
+        display: none;
+        
+    }
+    .nav-2 h3:nth-child(2){
+        display: none;
+    }
+    .nav-2 h3:nth-child(1){
+        display: none;
+    }
+    .nav-2 h3:nth-child(4){
+        display: none;
+    }
+    .nav-2 h3:nth-child(3){
+        display: none;
+    }
+    
+    .brand-name h2{
+        bottom:28%;
+
+    }
+    .stores-container{
+        grid-template-columns: 1fr;
+    }
+    .stores-container .store:nth-child(2){
+        border:none
+    }
+
+}
+
+@media(min-width:400px){
+    .cards-drops img{
+        aspect-ratio: 1/1;
+    }
+    .ship-cards:nth-child(2) p, .ship-cards:nth-child(3) p{
+        font-size: .9rem;
+    }
+    .ship-cards:nth-child(2) h1, .ship-cards:nth-child(3) h1{
+        font-size: 1.5rem;
+    }
+    .story .top .title{
+        font-size: 2rem;
+    }
+    .brand-name h2{
+        bottom:25%;
+
+    }
+    
+}
+@media(min-width:500px){
+    .cards-drops img{
+        aspect-ratio: 2/1.5;
+    }
+    .featured-cards img{
+        aspect-ratio: 1/1;
+       
+    }
+    .featured-cards .content{
+        padding: 2rem;
+    }
+    .featured-cards .content h3{
+        font-size: 2rem;
+    }
+    .featured-cards .content p{
+        font-size: 1rem;
+       
+    }
+    .hoodie-area img{
+        aspect-ratio: 4/3;
+    }
+    .men img, .women img {
+        cursor: pointer;
+        aspect-ratio: 3/2;
+        width:100%;
+        object-fit: cover;
+        object-position: top;
+    }
+    .display-product-details .image-wrapper{
+        aspect-ratio: 3/3;
+       
+    }
+    .display-product-details .image-wrapper img{
+        object-position: top;
+        
+    }
+    .stores-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .stores-container .store:nth-child(2){
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        padding: 1rem 1rem;
+    }
+    
+    
+}
+
+@media(min-width:600px){
+    .nav-2 h3:nth-child(5){
+        display: block;
+    }
+    .nav-2 h3:nth-child(2){
+        display: block;
+    }
+    .nav-2 #clickBtn{
+        display: none;
+    }
+    
+    .nav-2 h3:nth-child(1){
+        display: block;
+    }
+    .nav-2 h3:nth-child(4){
+        display: block;
+    }
+    .nav-2 h3:nth-child(3){
+        display: block;
+    }
+    .text-container h1{
+        font-size: 4.5rem;
+    }
+    .featured-cards img{
+        aspect-ratio: 3/2;
+       
+    }
+    .footer .bottom{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer{
+        gap: 10rem
+    }
+    .brand-name h2{
+        bottom:23%;
+    }
+    .mens-products-section{
+       grid-template-columns: repeat(3, 1fr);
+       
+    }
+    .mens-products-section .info-section .price-row p{
+        font-size: .7rem;
+        font-weight: 500;
+    }
+    .mens-products-section .info-section .title{
+        font-size: 11px;
+        
+    }
+    .display-product-details .image-wrapper{
+        aspect-ratio: 3/2;
+       
+    }
+    .display-product-details .image-wrapper img{
+        object-position: top;
+        
+    }
+   
+    
+}
+
+@media(min-width:620px){
+    .stable-navbar p{
+        display: block;
+    }
+}
+
+@media(min-width:800px){
+    .drops-cards-contaner{
+       grid-template-columns: repeat(3, 1fr);
+    }
+    .cards-drops img{
+        aspect-ratio: 2/3;
+    }
+    .text-container{
+        padding-left: 2rem;
+    }
+    .ship-section .title{
+        max-width: 450px;
+        font-size: 3rem;
+    }
+    .ship-section .desc{
+        font-family: "Inter", sans-serif;
+        max-width: 500px;
+    }
+    .ship-section-cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem
+    }
+    .ship-cards:nth-child(1){
+        grid-column: 1/5;
+        aspect-ratio: 4/2.5;
+    }
+    .ship-cards:nth-child(2){
+        grid-column: 1/3;
+        aspect-ratio: 3/4;
+    }
+
+    .ship-cards:nth-child(3){
+        grid-column: 3/5;
+        aspect-ratio: 3/4;
+    }
+    .ship-cards:nth-child(4){
+        grid-column: 1/5;
+        aspect-ratio: 4/2.5;
+    }
+    .ship-cards:nth-child(2) h1, 
+    .ship-cards:nth-child(3) h1{
+        font-size: 2rem;
+    }
+    .ship-cards:nth-child(3) h4{
+        padding: .5rem .5rem .5rem 1.5rem;
+        font-weight: 300;
+    }
+    .ship-cards:nth-child(2) h4{
+        padding: .4rem .4rem .4rem 1.5rem;
+        font-weight: 300;
+    }
+    .story .top .heading{
+        font-size: 7rem;
+    }
+    .featured-cards{
+        flex-shrink: 0;
+        width: 50%;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .featured-cards img{
+        aspect-ratio: 3/4.5
+       
+    }
+    .featured-drop-section .heading{
+        font-size: 4.5rem;
+    }
+    .featured-drop-section .description{
+        font-size: 1.5rem;
+    }
+    .featured-drop-cards-container{
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .featured-cards .content{
+        padding: 2.5rem;
+    }
+    .hoodie-area img{
+        aspect-ratio: 4/4;
+        
+    }
+    .hoodie-area .heading{
+       font-size: 6rem;
+    }
+   
+    .hoodie-area .rate-container h3{
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+    }
+    
+    .join .join-content-container h1{
+        font-family: "Big Shoulders", sans-serif;
+        color:white;
+        font-size: 5rem;
+        
+        max-width: 500px;
+    }
+
+    .join .join-content-container p{
+        max-width: 500px;
+    }
+    .shop-with-us .left{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 3rem;
+    }
+    .category-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .brand-name h2{
+        bottom:20%;
+    }
+    .footer{
+        grid-template-columns: repeat(2, 1fr);
+        gap:0;
+    }
+    .footer .top p{
+        font-family: Inter;
+        font-size: .9rem;
+        max-width: 500px;
+    }
+    .mens-products-section .info-section .price-row p{
+        font-size: .9rem;
+        font-weight: 500;
+    }
+    .mens-products-section .info-section .title{
+        font-size: 14px;
+        
+    }
+    
+    .display-product-details .product-detail-card{
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+    }
+    .display-product-details .image-wrapper{
+        aspect-ratio: 4/5;
+        width:100%;
+        margin-left: auto;
+        
+    }
+    .cart-details-info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+   
+}
+
+
+
+@media(min-width:1000px){
+   
+.cards {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 1%;
+    width: 98%;
+}
+    .stable-navbar{
+        width:90%;
+        left:5%;
+    }
+    .cards-drops img{
+        aspect-ratio: 2/2.5;
+    }
+    .cards-drops .title{
+        font-size: 2.5rem;
+    }
+    .text-container{
+        padding-left: 3.5rem;
+    }
+    .ship-cards:nth-child(1){
+        grid-column: 1/5;
+        aspect-ratio: 4/2;
+    }
+    .ship-cards:nth-child(2){
+        grid-column: 1/3;
+        aspect-ratio: 1/1;
+    }
+
+    .ship-cards:nth-child(3){
+        grid-column: 3/5;
+        aspect-ratio: 1/1;
+    }
+    .ship-cards:nth-child(4){
+        grid-column: 1/5;
+        aspect-ratio: 4/2;
+    }
+    .ship-section .title{
+        max-width: 700px;
+        font-size: 4rem;
+    }
+    .ship-section .desc{
+        max-width: 800px;
+        font-size: 1.5rem;
+    }
+    .hoodie-area img{
+        aspect-ratio: 4/3;
+        
+    }
+    .mens-products-section{
+        grid-template-columns: repeat(4, 1fr);
+        
+     }
+   
+}
+
+@media(min-width:1200px){
+    .ship-section-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .ship-cards:nth-child(1){
+        grid-column: 1/3;
+        aspect-ratio: 4/3;
+        height: 100%;
+
+    }
+    .ship-cards:nth-child(2){
+        grid-column: 3/4;
+        aspect-ratio: 2/3;
+    }.ship-cards:nth-child(3){
+        grid-column: 1/2;
+        aspect-ratio: 2/3;
+    }
+    .ship-cards:nth-child(4){
+        grid-column: 2/4;
+        aspect-ratio: 4/3;
+        height: 100%;
+    }
+    .featured-cards{
+        flex-shrink: 0;
+        width: 25%;
+        position: relative;
+    }
+    .hoodie-area{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .hoodie-area img{
+        aspect-ratio: 4/4;
+    }
+    .hoodie-area .heading{
+        font-size: 6rem;
+        max-width: 60px;
+    }
+    .hoodie-area .description{
+        max-width: 600px;
+    }
+    .hoodie-area .top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .shop-with-us{
+       grid-template-columns: repeat(2, 1fr);
+    }
+    .shop-with-us .top p{
+        max-width: 600px;
+    }
+}
+
+@media(min-width:1400px){
+    .ship-cards:nth-child(1){
+        grid-column: 1/3;
+        aspect-ratio: 18/4;
+        width:100%;
+        
+    }
+    .ship-cards:nth-child(2){
+        grid-column: 3/4;
+        aspect-ratio: 5/6;
+        width:100%;
+    }.ship-cards:nth-child(3){
+        grid-column: 1/2;
+        aspect-ratio: 5/6;
+        width:100%;
+    }
+    .ship-cards:nth-child(4){
+        grid-column: 2/4;
+        aspect-ratio: 18/4;
+
+        width:100%;
+    }
+    
+}
+
+@media(min-width:1500px){
+    .story{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .story .top .heading{
+        font-size: 7.5rem;
+    }
+    .story .bottom {
+        justify-content: center;
+        gap: 2rem
+    }
+    .story .bottom p{
+        font-size: 1.2rem;
+    }
+    .brand-name h2{
+        bottom:16%;
+
+    }
+    
+}
+
+@media(min-width:1600px){
+    .navbar, .mobile-nav{
+        padding: 2rem 8rem;
+    }
+    .cards-container{
+        padding: 0rem 10rem;
+    }
+    .cards-container .cards{
+        width:85%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .stable-navbar{
+        width:80%;
+        left:50%;
+        transform: translateX(-50%);
+
+    }
+    .new-drops, .ship-section, .story{
+        padding: 4rem 8rem;
+    }
+
+    .featured-drop-section{
+        padding: 5rem 0rem;
+    }
+    .featured-drop-section .heading{
+        padding: 0rem 8rem;
+        font-size: 4rem;
+        max-width: 900px;
+    }
+    .featured-drop-section .description{
+        font-size: 1rem;
+        max-width: 900px;
+        padding: 0rem 8rem 1rem 8rem;
+    }
+    .hoodie-area{
+        padding: 6rem 8rem;
+        
+    }
+
+
+    .join, .footer{
+        padding: 4rem 8rem;
+    }
+    .join .join-content-container{
+        height:80%;
+    }
+    .join .join-content-container h1{
+        font-size: 6rem;
+        max-width: 600px;
+    }
+    .shop-with-us{
+        padding: 6rem 8rem;
+    }
+    .category-container{
+       display: flex;
+       width:100%;
+       justify-content: center;
+    }
+    .men, .women{
+        width:35%;
+    }
+
+    .men img, .women img{
+        width:100%;
+        aspect-ratio: 3/4;
+        padding: 1rem;
+    }
+    .mens-products-section{
+        padding: 0rem 8rem 3rem 8rem;
+    }
+    .display-product-details{
+        padding: 2rem 8rem 2rem 0rem;
+    }
+    .display-product-details .image-wrapper{
+        width:85%;
+        margin-left: auto;
+        
+    }
+    .shopping-cart-container{
+        padding: 0rem 8rem;
+    }
+    .about-us .container{
+        padding: 0rem 8rem;
+    }
+   
+
+
+}
