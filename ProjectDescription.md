@@ -49,8 +49,10 @@ A fully dynamic, front-end e-commerce application built entirely using core **Ja
 
 ---
 
-## ⚙️ Installation & Setup
+## ⚙️ Project Link and Github Link
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
+# 🚀 E-Commerce Web Application (DOM-Driven)
+
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-black?style=flat&logo=github)](https://github.com/DeepakKumar-Nayak/E-Commerce-Web-Application-DOM-Driven-)
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=flat&logo=google-chrome)](https://loomix-where-design-meets-comfort.netlify.app/)
