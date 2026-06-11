@@ -168,6 +168,7 @@ function CouponApply() {
                 } else {
                     e.target.textContent = "Apply"
                     RemoveCouponCodeFor500()
+                    document.querySelector('#coupon-apply-two').disabled = false
                 }
             }
         }
@@ -183,6 +184,7 @@ function CouponApply() {
                 } else {
                     RemoveCouponCodeFor800()
                     e.target.textContent = "Apply"
+                    document.querySelector('#coupon-apply-one').disabled = false
                     
                 }
             }
