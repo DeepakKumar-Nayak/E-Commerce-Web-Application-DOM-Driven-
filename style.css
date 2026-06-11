@@ -69,6 +69,7 @@ html,body{
 
 } */
 .mobile-nav{
+    position: relative;
     padding: 1rem;
     display: none;
     margin-top: 2rem;
@@ -76,15 +77,16 @@ html,body{
     flex-direction: column;
     gap: 1rem;
     transition: ease-in-out 0.5s;
+    z-index: 10;
+    
 }
 
 .mobile-nav h3{
-    color:white;
+    color:rgb(80, 74, 74);
     font-family: "Big Shoulders", sans-serif;
     font-size: 2rem;
     font-weight: 200;
     text-transform: uppercase;
-    color:black;
 }
 
 
@@ -1297,7 +1299,8 @@ html,body{
 .product-desc .product-info .product-data{
     display: flex;
     align-items: center;
-    gap: .5rem
+    width:100%;
+    pointer-events: none;
 }
 
 .product-desc .product-info .product-data h3{
@@ -1356,7 +1359,7 @@ html,body{
 }
 .cart-data-display .cart .left img{
     width:100px;
-    height: 120px;
+    height: 130px;
     object-fit: cover;
     object-position: center;
 }
@@ -1371,11 +1374,14 @@ html,body{
 }
 .product-details-info h5{
     font-family: Inter;
+    padding-right: .5rem;
+    line-height: 1;
+    padding-bottom: 5px;
 }
 .product-details-info p:nth-child(2){
     font-family: Inter;
     font-size: .9rem;
-    color:rgba(0, 0, 0, 0.333)
+    color:rgba(0, 0, 0, 0.333);
 }
 .product-details-info p:nth-child(4){
     font-family: Inter;
@@ -1556,18 +1562,17 @@ html,body{
 
 /* cart styling ends */
 
-
-
-
-
-
 /* aboutus styling starts */
+
 .about-us{
-    width:100%;
-    height: 100%;
     position: absolute;
     top:0;
-    left:0;
+    width:100%;
+    height: 100vh;
+    background-image: url('./Aboutus/image.png');
+    background-size: cover;
+    background-position: center;
+    
     
 }
 .about-us img{
@@ -1577,12 +1582,14 @@ html,body{
     object-fit: cover;
     object-position: center;
     z-index: 2;
+
+
     
 }
 .about-us .container{
-    position: absolute;
-    top:70%;
+    position: relative;
     width:100%;
+    height: 100%;
     z-index: 2;
     
     font-family: Inter;
@@ -1591,10 +1598,83 @@ html,body{
     justify-content: space-between;
     font-size: 5rem;
     overflow: hidden;
+    align-items: flex-end;
+    
 }
 .about-us .container h1{
     color:rgb(75, 75, 75)
 }
+.about-brand{
+    width: 100%;
+    min-height: 100%;
+    padding: 4rem 1rem;
+    
+    display:grid;
+    grid-template-columns: 1fr;
+    background-color: #8A877B;
+    
+}
+
+.about-brand .heading h4{
+    font-family: Inter;
+    font-size: .9rem;
+}
+
+.about-brand .heading h1{
+    font-family: Inter;
+    line-height: 1;
+    padding-bottom: 8rem;
+}
+
+.about-brand #brand{
+    padding-left: 2rem;
+}
+.abous-us-info h2{
+    font-family: Inter;
+    padding-bottom: 1rem;
+}
+.abous-us-info p{
+    font-family: Inter;
+}
+
+.about-brand .image-area{
+    position: relative;
+    background-color: #4b4a46;
+    width:100%;
+    height: 50vh;
+    margin-bottom: 2rem;
+}
+
+.about-brand .image-area img{
+    position: absolute;
+    bottom: 0;
+    height: 130%;
+    left:50%;
+    max-width: 300px;
+    transform: translateX(-50%);
+}
+.original-price{
+    text-decoration: line-through;
+}
+.cartupdate{
+    display: inline-flex;
+    position: relative;
+}
+.cartupdate p{
+    font-size: 2rem;
+
+}
+
+/* pointer events-none section */
+/* .product-description{
+    pointer-events: none;
+    border:1px solid red;
+} */
+/* pointer events-none section */
+
+
+
+
 /* aboutus styling ends */
 
 
@@ -1741,6 +1821,7 @@ html,body{
         font-size: .7rem;
         font-weight: 500;
     }
+   
     .mens-products-section .info-section .title{
         font-size: 11px;
         
@@ -1753,6 +1834,13 @@ html,body{
         object-position: top;
         
     }
+    .made-with-love{
+        width:100%;
+    }
+    .made-with-love h1{
+        font-size: 3rem;
+    }
+ 
    
     
 }
@@ -1914,6 +2002,9 @@ html,body{
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
     }
+    .made-with-love h1{
+        font-size: 4rem;
+    }
    
 }
 
@@ -1974,7 +2065,34 @@ html,body{
     .mens-products-section{
         grid-template-columns: repeat(4, 1fr);
         
-     }
+    }
+    .made-with-love h1{
+        font-size: 5rem;
+    }
+    .about-brand{
+        grid-template-columns: 30% 40% 30%;
+        gap: 1rem;
+        padding: 20% 3rem 0% 3rem;
+        
+    }
+    .about-brand h1{
+        font-size: 3rem;
+    }
+    .who-we-are{
+        padding-top: 0rem;
+    }
+    .about-brand .image-area{
+        height: 60vh;
+    }
+    .about-brand .image-area img{
+        position: absolute;
+        bottom: 0;
+        height: 120%;
+        left:50%;
+        max-width: 500px;
+        transform: translateX(-50%);
+    }
+    
    
 }
 
@@ -2031,6 +2149,7 @@ html,body{
     .shop-with-us .top p{
         max-width: 600px;
     }
+   
 }
 
 @media(min-width:1400px){
@@ -2054,6 +2173,9 @@ html,body{
         aspect-ratio: 18/4;
 
         width:100%;
+    }
+    .brand-image-container img{
+        height: 120%;
     }
     
 }
@@ -2165,7 +2287,17 @@ html,body{
     .about-us .container{
         padding: 0rem 8rem;
     }
-   
-
-
+    .made-with-love{
+        padding: 5rem 8rem;
+    }
+    .made-with-love h1{
+        font-size: 8rem;
+    }
+    .about-brand{
+        padding: 15% 8rem 0rem 8rem;
+    }
+    .about-brand h1{
+        font-size: 5rem;
+        font-weight: 500;
+    }
 }

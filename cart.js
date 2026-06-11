@@ -153,6 +153,7 @@ function CouponApply() {
     const couponsContainer = document.querySelector('.coupons-container')
     couponsContainer.addEventListener('click', function (e) {
         if (e.target.id === "coupon-apply-one") {
+            document.querySelector('#coupon-apply-two').disabled = true
             console.log('apply')
             if (getCartData.length >= 3) {
                 const getDiscountInfoData = e.target.previousElementSibling
@@ -171,6 +172,7 @@ function CouponApply() {
             }
         }
         if (e.target.id === 'coupon-apply-two') {
+            document.querySelector('#coupon-apply-one').disabled = true
             if (getCartData.length >= 4) {
                 const getDiscountInfoData = e.target.previousElementSibling
                 const getCouponCode = getDiscountInfoData.querySelector('h4')
@@ -205,6 +207,7 @@ applyButton.addEventListener('click', function(e){
         
             UseCouponAmount800()
             e.target.textContent = "REMOVE"
+            getInput.disabled = true
         }else{
             let discount_on_coupon = document.querySelector('#discount-oncoupon')
             discount_on_coupon.textContent = `-₹0`
@@ -212,6 +215,7 @@ applyButton.addEventListener('click', function(e){
 
             e.target.textContent = "APPLY"
             getInput.value = "Enter Your Coupon Code"
+            getInput.disabled = false
         }
     }else if(getCouponCode === "BG3500" && getCartData.length>=3){
         if(e.target.textContent === "APPLY"){
@@ -219,13 +223,15 @@ applyButton.addEventListener('click', function(e){
             discount_on_coupon.textContent = `-₹500`
             UseCouponAmount500()
             e.target.textContent = "REMOVE"
+            getInput.disabled = true
         
         }else{
             let discount_on_coupon = document.querySelector('#discount-oncoupon')
             discount_on_coupon.textContent = `-₹0`
             RemoveCouponAmount500()
             e.target.textContent  = "APPLY"
-             getInput.value = "Enter Your Coupon Code"
+            getInput.value = "Enter Your Coupon Code"
+            getInput.disabled = false
         }
     }else{
         getInput.value = "INVALID COUPON CODE"

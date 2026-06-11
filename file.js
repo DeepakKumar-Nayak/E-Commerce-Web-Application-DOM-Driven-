@@ -9,7 +9,6 @@ const newDropsContainer = document.querySelector('.drops-cards-contaner')
 
 
 
-
 let isOpen = false;
 menu.addEventListener('click', function () {
   

@@ -2856,7 +2856,7 @@ productDetailsContainer.innerHTML += ` <div class="product-detail-card">
         
                                     </div>
                                 </div>
-                                <h4>${elem.icons}</h4>
+                                <h4 class="togglt-btn">${elem.icons}</h4>
                             </div>
                             <p>${elem.description}</p>
 
@@ -3062,8 +3062,12 @@ check.addEventListener('click', function () {
 let flag=true;
 const productDescriptionContainer = document.querySelector('.product-description')
 productDescriptionContainer.addEventListener('click', function(e){
-
-  let parentDiv = e.target.closest('.product-desc')
+  const toggleButton = e.target.closest('.togglt-btn')
+  
+  //console.log(toggleButton)
+  if(!toggleButton) return
+  let parentDiv = toggleButton.closest('.product-desc')
+  
   let findDescription = parentDiv.querySelector('p')
 
   if(flag){
@@ -3114,10 +3118,17 @@ addtoCart.addEventListener('click', function(){
     size:currentSize
   }
 
-  cartArray.push(cartObject)
+  if(cartObject.size!== undefined){
+    cartArray.push(cartObject)
+    localStorage.setItem('cart', JSON.stringify(cartArray))
+  }else{
+    alert('please select the seize before adding Items into cart')
+  }
+
+ 
 
 
-  localStorage.setItem('cart', JSON.stringify(cartArray))
+  
 })
 
 console.log(cartArray)
