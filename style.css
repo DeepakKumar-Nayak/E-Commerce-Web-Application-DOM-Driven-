@@ -1301,6 +1301,7 @@ html,body{
     align-items: center;
     width:100%;
     pointer-events: none;
+    gap:.5rem
 }
 
 .product-desc .product-info .product-data h3{
