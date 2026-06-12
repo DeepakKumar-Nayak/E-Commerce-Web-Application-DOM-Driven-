@@ -153,11 +153,12 @@ function CouponApply() {
     const couponsContainer = document.querySelector('.coupons-container')
     couponsContainer.addEventListener('click', function (e) {
         if (e.target.id === "coupon-apply-one") {
-            document.querySelector('#coupon-apply-two').disabled = true
+            
             console.log('apply')
             if (getCartData.length >= 3) {
                 const getDiscountInfoData = e.target.previousElementSibling
                 const getCouponCode = getDiscountInfoData.querySelector('h4')
+                document.querySelector('#coupon-apply-two').disabled = true
 
                 let getApplyText = e.target.textContent
                 if (getApplyText === "Apply") {
@@ -173,10 +174,11 @@ function CouponApply() {
             }
         }
         if (e.target.id === 'coupon-apply-two') {
-            document.querySelector('#coupon-apply-one').disabled = true
+           
             if (getCartData.length >= 4) {
                 const getDiscountInfoData = e.target.previousElementSibling
                 const getCouponCode = getDiscountInfoData.querySelector('h4')
+                document.querySelector('#coupon-apply-one').disabled = true
                 let getApplyText = e.target.textContent
                 if (getApplyText === "Apply") {
                     HandleCouponCodeFor800(getCouponCode)
