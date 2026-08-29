@@ -55,4 +55,4 @@ A fully dynamic, front-end e-commerce application built entirely using core **Ja
 
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-black?style=flat&logo=github)](https://github.com/DeepakKumar-Nayak/E-Commerce-Web-Application-DOM-Driven-)
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=flat&logo=google-chrome)](https://loomix-ezeqmlmhr-deepak-kumar-projects13.vercel.app/index.html/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=flat&logo=google-chrome)](https://loomix-ezeqmlmhr-deepak-kumar-projects13.vercel.app/index.html)
